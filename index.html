@@ -1,0 +1,247 @@
+<!DOCTYPE HTML !>
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="../test/css/jquery-ui/jquery-ui.css" type="text/css" media="screen" />	
+		<link rel="stylesheet" href="https://www.compendiumblog.com/css/compendium.css" type="text/css" media="screen" />	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+		<script type="text/javascript" src="../jquery.ui.confirmButton.js"></script>
+
+		<style type="text/css">
+
+
+			.destruction{
+				background-color; #ffaaaa;
+			}
+
+			#quickdemo .ui-button{
+				color: #000;
+			}
+			#quickdemo .ui-confirm{
+				background-image: none;
+				background-color: #f00; 
+				color: #fff;
+			}
+
+			.new-design h1, .new-design h2{
+				color: #333;
+			}
+
+
+			.box{
+			background-color: #ddd;
+			position: relative;
+			width: 300px;
+			min-height: 300px;
+			padding: 25px;
+			}
+
+			body{
+				background: url('bg.png') top left repeat;
+				background-color: #fff;
+				min-height: 100%;
+				margin: 0px;
+				padding: 0px;
+				min-width: 1000px;
+			}
+
+			div.new-design{
+				width: 1000px;
+			}
+			
+			.yellow.post-it{
+				background-color: #aee;	
+			}
+
+			.green.post-it{
+				background-color: #aea;	
+			}
+
+			.post-it {
+				padding:15px;
+				font-size:15px;
+				-moz-transform: rotate(7deg);
+				-webkit-transform: rotate(7deg);
+				-o-transform: rotate(7deg);
+				-ms-transform: rotate(7deg);
+				transform: rotate(7deg);
+				box-shadow: 0px 4px 6px #333;
+				-moz-box-shadow: 0px 4px 6px #333;
+				-webkit-box-shadow: 0px 4px 6px #333;
+			}
+
+			#intro{
+				top: 5px;
+				float: left;
+				left: 5px;
+				-moz-transform: rotate(-8deg);
+				-webkit-transform: rotate(-8deg);
+				-o-transform: rotate(-8deg);
+				-ms-transform: rotate(-8deg);
+				transform: rotate(-8deg);
+			}
+
+			#license{
+				float: right;
+				-moz-transform: rotate(9deg);
+				-webkit-transform: rotate(9deg);
+				-o-transform: rotate(9deg);
+				-ms-transform: rotate(9deg);
+				transform: rotate(9deg);
+			}
+
+			#todo{
+				float: right;
+				-moz-transform: rotate(4deg);
+				-webkit-transform: rotate(4deg);
+				-o-transform: rotate(4deg);
+				-ms-transform: rotate(4deg);
+				transform: rotate(4deg);
+			}
+
+			#quickdemo{
+				width: 400px;
+				float: left;
+				-moz-transform: rotate(2deg);
+				-webkit-transform: rotate(2deg);
+				-o-transform: rotate(2deg);
+				-ms-transform: rotate(2deg);
+				transform: rotate(2deg);
+			}
+
+			#quickdemo pre{
+				font-size: 10pt;
+				background-color: #fff;
+				border: 1px solid black;
+				padding: 10px;
+			}
+
+
+			#license_text{
+				font-size: 10px;
+			}
+
+			#main{
+				position: relative;
+				margin-right: auto;
+				margin-left: auto;	
+				width: 800px;
+				top: 25px;
+				bottom: 100px;
+			}
+			#main-content{
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.instructions{
+				float: right;
+			}
+		</style>
+		<title>Confirm Button JQuery-UI Plugin</title>
+	</head>
+	<body>
+		<div class="new-design" id="main" >
+		<div id="intro" class="box post-it green">
+			<h1>Confirm Button</h1>
+			ConfirmButton is a jQuery-UI plugin that creates a modal button useful for making it hard
+			to perform a destructive action by accident without getting in the way.
+			<br/><br/>
+			This project is maintained by Compendium. We do business blogging.
+			visit our <a href="http://www.compendium.com">website</a> or our <a href="http://blog.compendium.com">blog</a>.
+		</div>
+
+		<div id="todo" class="box post-it blue">
+			<h2>Todo </h2>
+			This is an early version.  It works, but there is some more work to be done including:
+			<ul>
+				<li>customize transitions</li>
+				<li>changing mode without animation</li>
+				<li>customize styles</li>
+				<li>more testing</li>
+			</ul>
+		</div>	
+
+		<div id="license" class="box post-it yellow">
+			<h2>License</h2>
+			We have released this under a MIT style license.  Feel free to for, or do with as you wish.
+			<a id="toggle_license_text" href="javascript:void(0);">show full text</a>
+
+			<div id="license_text" >
+				<br/><br/>
+				Copyright &copy; 2011 by Compendium <br/><br/>
+
+				Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.<br/><br/>
+
+				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br/><br/>
+			</div>
+		</div>
+		<div id="quickdemo" class="box post-it yellow">
+			<h1>A Quick Demo</h1>
+			<div class='instructions'>
+				<h3>Instructions</h3>
+				<ol>
+					<li>Click the button.</li>
+					<li>Now click away</li>
+					<li>Now click the button again</li>
+					<li>Click the confirm button once</li>
+					<li><a href="javascript:void(0)" id="toggle-source">View the source</a></li>
+				</ol>
+			</div>
+			<br />
+			<input type="button" id="quick-demo-button"/>
+				<br style="clear: both"/>
+			<div id="demo-source" style='clear: both'>
+			<code>
+			<pre>
+$('#quick-demo-button').confirmButton({
+	 button : {label: 'Remove Me'}
+	})
+	.bind('confirmedclick', function(){
+		// on confirmed click hide the button for 10 seconds
+		$('#quick-demo-button').fadeOut()
+		setTimeout(function(){
+			$('#quick-demo-button').fadeIn();
+		}, 10000);
+});
+			</pre>
+			</code>
+		</div>
+				<br style="clear: both"/>
+		</div>	
+
+		</div>
+		
+		<div class='footer '> 
+		</div>
+		<script>
+			$(document).ready(function(){
+				$('#license_text').hide();
+				$("#toggle_license_text").click(function(){
+					$('#license_text').slideToggle();
+				});
+
+				$('#quick-demo-button').confirmButton({button: {label: 'Remove Me'}}).bind('confirmedclick', function(){
+					$('#quick-demo-button').fadeOut();
+					setTimeout(function(){
+					$('#quick-demo-button').fadeIn();
+					$('#quick-demo-button').confirmButton('mode','normal');
+					}, 10000);
+				});
+				$('#remove-intro').confirmButton({
+					button : {label: 'Remove Intro Note'}
+					}).bind('confirmedclick', function(){
+						$("#intro").fadeOut();
+						$("#remove-intro").fadeOut();
+				});
+				$('#demo-source').hide();
+
+				$('#toggle-source').click(function(){
+					$('#demo-source').slideToggle();
+				});
+			});	
+		</script>
+	</body>
+</html>
+
